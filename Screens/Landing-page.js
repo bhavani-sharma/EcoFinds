@@ -16,8 +16,8 @@ export default function LandingPage({navigation}) {
           <TouchableOpacity style={styles.menuBtn}><Text style={styles.icon}>☰</Text></TouchableOpacity>
           <Text style={styles.logo}>EcoFinds</Text>
           <View style={styles.headerIcons}>
-            <TouchableOpacity style={styles.cartBtn}><Text style={styles.icon}>🛒</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.profileBtn}><Text style={styles.icon}>👤</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.cartBtn} onPress={()=>navigation.navigate("Cart")} ><Text style={styles.icon}>🛒</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.profileBtn} onPress={()=>navigation.navigate("Profile")} ><Text style={styles.icon}>👤</Text></TouchableOpacity>
           </View>
         </View>
 
@@ -41,14 +41,14 @@ export default function LandingPage({navigation}) {
         </View>
 
         {/* Categories */}
-        <TouchableOpacity style={styles.categoriesBtn}>
+        <TouchableOpacity style={styles.categoriesBtn} onPress={()=>navigation.navigate("Products")}>
           <Text style={styles.catText}>Explore All Categories</Text>
         </TouchableOpacity>
 
         {/* Product Cards */}
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.cardRow}>
           <View style={styles.card}>
-            <Image style={styles.cardImg} source={ '../assets/vintagechair.avif' } />
+            <Image style={styles.cardImg} source={require( '../assets/vintagechair.avif') } />
             <Text style={styles.cardTitle}>Vintage Chair</Text>
           </View>
           <View style={styles.card}>

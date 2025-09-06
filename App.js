@@ -10,7 +10,7 @@ import CartPage from "./Screens/Cart";
 import ProductPage from "./Screens/ProductPage";
 import ProfileScreen from "./Screens/ProfileScreen";
 import MyListingsPage from "./MyListingsPage";
-import AddProductScreen from "./Screens/AddProductScreen";
+import AddProductScreen from "./AddProductScreen";
 import ProfilePage from "./Screens/ProfilePage";
 import CollapsibleMenu from "./Screens/collapse";
 import PreviousPurchaseScreen from "./Screens/previous";

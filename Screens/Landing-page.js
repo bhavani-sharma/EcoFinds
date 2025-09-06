@@ -17,7 +17,7 @@ export default function LandingPage({navigation}) {
           <Text style={styles.logo}>EcoFinds</Text>
           <View style={styles.headerIcons}>
             <TouchableOpacity style={styles.cartBtn} onPress={()=>navigation.navigate("Cart")} ><Text style={styles.icon}>🛒</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.profileBtn} onPress={()=>navigation.navigate("Profilepage")} ><Text style={styles.icon}>👤</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.profileBtn} onPress={()=>navigation.navigate("ProfilePage")} ><Text style={styles.icon}>👤</Text></TouchableOpacity>
           </View>
         </View>
 

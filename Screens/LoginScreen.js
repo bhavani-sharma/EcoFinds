@@ -33,13 +33,15 @@ const LoginScreen = ({navigation}) => {
     
     <View style={styles.container}>
       {/* Logo Placeholder */}
+      <Text style={styles.headerText}>WELCOME TO ECOFINDS</Text>
       <Image
-  source={require('../assets/icon.jpg')}  // Adjust path as needed
+  source={require('../assets/iconn.jpg')}  // Adjust path as needed
   style={styles.logoImage}
 />
 
       {/* Login Form */}
       <View style={styles.formContainer}>
+        
         <Text style={styles.label}>Email / Username :</Text>
         <TextInput
           style={styles.input}
@@ -81,6 +83,10 @@ const styles = StyleSheet.create({
     padding: 20,
     justifyContent: 'center',
     backgroundColor: '#fff',
+  },
+  headerText:{
+    alignSelf:'center',
+    fontWeight:"bold"
   },
   logoImage: {
   width: 100,

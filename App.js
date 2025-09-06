@@ -9,6 +9,9 @@ import LoginScreen from "./Screens/LoginScreen";
 import CartPage from "./Screens/Cart";
 import ProductPage from "./Screens/ProductPage";
 import ProfileScreen from "./Screens/ProfileScreen";
+import MyListingsPage from "./Screens/MyListingsPage";
+import AddProductScreen from "'/Screens/AddProductScreen";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -19,8 +22,12 @@ export default function App() {
         <Stack.Screen name="Signup" component={SignupPage} />
         <Stack.Screen name="Home" component={Landingpage} />
         <Stack.Screen name="Cart" component={CartPage} />
+
         <Stack.Screen name="Products" component={ProductPage} />
         <Stack.Screen name="Profile" component={ProfileScreen} initialParams={{ name: "User" }} />
+        <Stack.Screen name="MyListingsPage" component={MyListingsPage} />
+        <Stack.Screen name="AddProductScreen" component={AddProductScreen} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

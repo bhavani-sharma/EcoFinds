@@ -1,29 +1,27 @@
-// App.js
-import React from "react";
+import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-// Import all screens
-import HomeScreen from "./HomeScreen";
-// import SignUpPage from "./SignUpPage";
-import LoginScreen from "./LoginScreen";
-import CartPage from "./CartPage";
-import ProductPage from "./ProductPage";
-import ProfilePage from "./ProfilePage";
 
-const Stack = createStackNavigator();
+import SignupPage from "./Screens/Sign-up";
+import Landingpage from "./Screens/Landing-page";
+import LoginScreen from "./Screens/LoginScreen";
+import CartPage from "./Screens/Cart";
+import MyListingsPage from "./Screens/MyListingsPage";
+import AddProductScreen from "'/Screens/AddProductScreen";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        {/* Define all routes here */}
-        <Stack.Screen name="Home" component={HomeScreen} />
-        {/* <Stack.Screen name="SignUp" component={SignUpPage} /> */}
-        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      <Stack.Navigator initialRouteName="Login">  
+        <Stack.Screen name="Login" component={LoginScreen} /> 
+        <Stack.Screen name="Signup" component={SignupPage} />
+        <Stack.Screen name="Home" component={Landingpage} />
         <Stack.Screen name="Cart" component={CartPage} />
-        <Stack.Screen name="Product" component={ProductPage} />
-        <Stack.Screen name="Profile" component={ProfilePage} />
+        <Stack.Screen name="MyListingsPage" component={MyListingsPage} />
+        <Stack.Screen name="AddProductScreen" component={AddProductScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

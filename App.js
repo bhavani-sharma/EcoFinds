@@ -12,7 +12,8 @@ import ProfileScreen from "./Screens/ProfileScreen";
 import MyListingsPage from "./MyListingsPage";
 import AddProductScreen from "./Screens/AddProductScreen";
 import ProfilePage from "./Screens/ProfilePage";
-
+import CollapsibleMenu from "./Screens/collapse";
+import PreviousPurchaseScreen from "./Screens/previous";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -23,12 +24,13 @@ export default function App() {
         <Stack.Screen name="Signup" component={SignupPage} />
         <Stack.Screen name="Home" component={Landingpage} />
         <Stack.Screen name="Cart" component={CartPage} />
-
+        <Stack.Screen name="menu" component={CollapsibleMenu} />
         <Stack.Screen name="Products" component={ProductPage} />
         <Stack.Screen name="Profile" component={ProfileScreen} initialParams={{ name: "User" }} />
         <Stack.Screen name="MyListingsPage" component={MyListingsPage} />
         <Stack.Screen name="AddProductScreen" component={AddProductScreen} />
         <Stack.Screen name="ProfilePage" component={ProfilePage}/>
+        <Stack.Screen name="Purchases" component={PreviousPurchaseScreen}/>
 
       </Stack.Navigator>
     </NavigationContainer>

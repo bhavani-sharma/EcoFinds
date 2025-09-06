@@ -13,11 +13,11 @@ export default function LandingPage({navigation}) {
       <ScrollView style={styles.overlay}>
         {/* Header */}
         <View style={styles.header}>
-          <TouchableOpacity style={styles.menuBtn}><Text style={styles.icon}>☰</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.menuBtn}><Text style={styles.icon} onPress={()=>navigation.navigate("menu")} >☰</Text></TouchableOpacity>
           <Text style={styles.logo}>EcoFinds</Text>
           <View style={styles.headerIcons}>
             <TouchableOpacity style={styles.cartBtn} onPress={()=>navigation.navigate("Cart")} ><Text style={styles.icon}>🛒</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.profileBtn} onPress={()=>navigation.navigate("Profile")} ><Text style={styles.icon}>👤</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.profileBtn} onPress={()=>navigation.navigate("Profilepage")} ><Text style={styles.icon}>👤</Text></TouchableOpacity>
           </View>
         </View>
 

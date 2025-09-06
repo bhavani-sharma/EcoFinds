@@ -6,9 +6,8 @@ import {
   TouchableOpacity,
   ImageBackground,
 } from "react-native";
-import Icon from "react-native-vector-icons/Ionicons";
 
-const ProfilePage = () => {
+const ProfilePage = ({navigation}) => {
   return (
     <ImageBackground
       source={{
@@ -22,19 +21,9 @@ const ProfilePage = () => {
         <View style={styles.header}>
           <Text style={styles.logo}>EcoApp 🌱</Text>
 
-          <View style={styles.headerIcons}>
-            {/* Cart Icon with badge */}
-            <View style={styles.cartWrapper}>
-              <Icon name="cart-outline" size={28} color="#2e7d32" />
-              <View style={styles.cartBadge}>
-                <Text style={styles.badgeText}>2</Text>
-              </View>
-            </View>
-
-            {/* Profile Circle */}
-            <View style={styles.profileCircle} />
-          </View>
-        </View>
+           <TouchableOpacity style={styles.cartBtn} onPress={()=>navigation.navigate("Cart")} ><Text style={styles.icon}>🛒</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.profileBtn} onPress={()=>navigation.navigate("Profile")} ><Text style={styles.icon}>👤</Text></TouchableOpacity>
+        </View>
 
         {/* Profile Section */}
         <View style={styles.profileSection}>
@@ -61,10 +50,10 @@ const ProfilePage = () => {
         {/* Navigation Section */}
         <View style={styles.navigationSection}>
           <Text style={styles.navTitle}>⚡ Quick Access</Text>
-          <TouchableOpacity style={styles.navButton}>
+          <TouchableOpacity style={styles.navButton} onPress = {()=>navigation.navigate("MyListingsPage")}>
             <Text style={styles.navText}>📦 My Listings</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.navButton}>
+          <TouchableOpacity style={styles.navButton} onPress = {()=>navigation.navigate("Purchases")}>
             <Text style={styles.navText}>🛍️ My Purchases</Text>
           </TouchableOpacity>
         </View>

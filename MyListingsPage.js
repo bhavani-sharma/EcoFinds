@@ -88,7 +88,7 @@ const MyListingsPage = () => {
         {/* Title + Add New */}
         <View style={styles.titleRow}>
           <Text style={styles.title}>My Listings</Text>
-          <TouchableOpacity style={styles.addButton}>
+          <TouchableOpacity style={styles.addButton} onPress={() => Navigation.navigate("AddProductScreen")}>
             <Text style={styles.addButtonText}>+ Add New</Text>
           </TouchableOpacity>
         </View>

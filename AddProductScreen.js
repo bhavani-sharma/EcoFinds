@@ -46,9 +46,10 @@ export default function AddProductScreen() {
           {/* Header */}
           <View style={styles.header}>
             <Text style={styles.logo}>🌍 EcoFinds</Text>
-            <TouchableOpacity style={styles.cartBtn}>
+            <TouchableOpacity style={styles.cartBtn} onPress={()=>Navigation.navigate("Cart")}>
               <Text style={styles.cartIcon}>🛒</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.profileBtn} onPress={()=>navigation.navigate("Profile")} ><Text style={styles.icon}>👤</Text></TouchableOpacity>
           </View>
 
           <Text style={styles.title}>Add a New Product</Text>
